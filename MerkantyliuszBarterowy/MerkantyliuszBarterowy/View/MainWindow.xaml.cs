@@ -11,8 +11,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MerkantyliuszBarterowy.ViewModel;
 
-namespace MerkantyliuszBarterowy
+namespace MerkantyliuszBarterowy.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

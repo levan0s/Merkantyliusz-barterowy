@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 
-namespace MerkantyliuszBarterowy
+namespace MerkantyliuszBarterowy.ViewModel
 {
     public interface IMainWindowViewModel
     {

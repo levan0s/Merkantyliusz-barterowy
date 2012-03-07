@@ -6,7 +6,7 @@ using System.Windows.Input;
 using Microsoft.Practices.Prism.Commands;
 using System.Windows;
 
-namespace MerkantyliuszBarterowy
+namespace MerkantyliuszBarterowy.ViewModel
 {
     class MainWindowViewModel : IMainWindowViewModel
     {
