@@ -1,8 +1,23 @@
 ﻿<Window x:Class="MerkantyliuszBarterowy.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Merkantyliusz Barterowy" Height="350" Width="525">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
         
+        
+        <Menu Grid.Row="1" Name="menu1" HorizontalAlignment="Right">
+            <Grid Name="container">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <MenuItem Header="_Handel" Command="{Binding ShowBarterViewCommand}"/>
+                <MenuItem Header="_Podróż" Command="{Binding ShowVoyageViewCommand}" Grid.Column="1" />
+            </Grid>
+        </Menu>
     </Grid>
 </Window>
