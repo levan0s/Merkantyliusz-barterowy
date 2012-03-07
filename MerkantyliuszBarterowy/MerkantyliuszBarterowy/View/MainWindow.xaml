@@ -1,14 +1,25 @@
 ﻿<Window x:Class="MerkantyliuszBarterowy.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:viewModel="clr-namespace:MerkantyliuszBarterowy.ViewModel"
+        xmlns:view="clr-namespace:MerkantyliuszBarterowy.View"
         Title="Merkantyliusz Barterowy" Height="350" Width="525">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewModel:BarterViewModel}">
+            <view:BarterView />
+        </DataTemplate>
+        
+        <DataTemplate DataType="{x:Type viewModel:VoyageViewModel}">
+            <view:VoyageView />
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         
-        <ContentControl Grid.Row="0" />
+        <ContentControl Grid.Row="0" Content="{Binding CurrentView}"/> 
         
         <Menu Grid.Row="1" Name="menu1" HorizontalAlignment="Right">
             <Grid Name="container">

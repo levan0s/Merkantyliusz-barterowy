@@ -14,6 +14,8 @@ namespace MerkantyliuszBarterowy
         {
             For<IMainWindow>().Use<MainWindow>();
             For<IMainWindowViewModel>().Use<MainWindowViewModel>();
+            For<IBarterViewModel>().Use<BarterViewModel>();
+            For<IVoyageViewModel>().Use<VoyageViewModel>();
         }
     }
 }
