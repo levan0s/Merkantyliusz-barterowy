@@ -7,7 +7,7 @@ namespace MerkantyliuszBarterowy.Model
 {
     abstract class TradeGood
     {
-        new TradeGood(String name, decimal CashEquvalent) 
+        public TradeGood(String name, decimal CashEquvalent) 
         {
         
         }
