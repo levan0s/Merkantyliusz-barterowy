@@ -76,7 +76,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\PCMerchant.cs" />
+    <Compile Include="Model\Merchant.cs" />
     <Compile Include="Model\Town.cs" />
     <Compile Include="Model\TradeGood.cs" />
     <Compile Include="ViewModel\IBarterViewModel.cs" />
