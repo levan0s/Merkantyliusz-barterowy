@@ -7,33 +7,36 @@ namespace MerkantyliuszBarterowy.Model
 {
     class Town
     {
-        int longitude;      //długość geograficzna
-        int latitude;       //szerokość geograficzna
-        string name;
+        
         public Town(int latitude, int longitude, string name)
         { 
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.name = name;
+        _latitude = latitude;
+        _longitude = longitude;
+        _name = name;
         }
+
         public int Longitude
         {
-            get { return this.longitude; }
+            get { return this._longitude; }
         }
+
         public int Latitude
         {
-            get { return this.latitude; }
+            get { return this._latitude; }
         }
+
         public string Name
         {
-            get {return name; }
+            get {return _name; }
         }
+
         public int GetTravelDistance(Town destination)
         {
             int latDiff = Math.Abs(Latitude - destination.Latitude);
             int lonDiff = Math.Abs(Longitude - destination.Longitude);
             return (latDiff + lonDiff);                         //yes, that's silly
         }
+
         public static List<Town> CreateTowns()
         {
             List<Town> towns = new List<Town>(){
@@ -46,5 +49,10 @@ namespace MerkantyliuszBarterowy.Model
             
             return towns;
         }
+
+
+        private int _longitude;      //długość geograficzna
+        private int _latitude;       //szerokość geograficzna
+        private string _name;
     }
 }
