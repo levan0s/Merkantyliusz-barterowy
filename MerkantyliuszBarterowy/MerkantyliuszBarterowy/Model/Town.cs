@@ -17,5 +17,12 @@ namespace MerkantyliuszBarterowy.Model
         {
             get { return this.latitude; }
         }
+        
+        public int GetTravelDistance(Town destination)
+        {
+            int latDiff = Math.Abs(Latitude - destination.Latitude);
+            int lonDiff = Math.Abs(Longitude - destination.Longitude);
+            return (latDiff + lonDiff);                         //yes, that's silly
+        }
     }
 }

@@ -26,14 +26,9 @@ namespace MerkantyliuszBarterowy.Model
         }
         private decimal GetTravelPrice(Town destination)
         {
-            return (GetTravelDistance(destination) * cashPerDistance);
+            return (actualLocation.GetTravelDistance(destination) * cashPerDistance);
         }
-        private int GetTravelDistance(Town destination)     
-        {
-            int latDiff = Math.Abs(actualLocation.Latitude - destination.Latitude);
-            int lonDiff = Math.Abs(actualLocation.Longitude - destination.Longitude);
-            return (latDiff + lonDiff);                         //yes, that's silly
-        }
+        
 
     }
 }
