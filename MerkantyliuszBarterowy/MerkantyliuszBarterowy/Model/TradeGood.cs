@@ -5,11 +5,11 @@ using System.Text;
 
 namespace MerkantyliuszBarterowy.Model
 {
-    abstract class TradeGood
+    class TradeGood
     {
         public TradeGood(String name, decimal CashEquvalent) 
         {
-        
+            
         }
     }
 }
