@@ -19,7 +19,7 @@ namespace MerkantyliuszBarterowy.Model
         }
         
 
-        public void travel(Town destination)
+        public void Travel(Town destination)
         { 
         //todo - potrącanie ceny za podróż z 'sakiewki'
             actualLocation = destination;
