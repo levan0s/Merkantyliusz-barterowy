@@ -79,6 +79,8 @@
     <Compile Include="Model\Merchant.cs" />
     <Compile Include="Model\Town.cs" />
     <Compile Include="Model\TradeGood.cs" />
+    <Compile Include="Model\TradeGoods\TradeGoodTypes.cs" />
+    <Compile Include="Model\TradeGoods\Wood.cs" />
     <Compile Include="ViewModel\IBarterViewModel.cs" />
     <Compile Include="ViewModel\IVoyageViewModel.cs" />
     <Compile Include="ViewModel\VoyageViewModel.cs" />
