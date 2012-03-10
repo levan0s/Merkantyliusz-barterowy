@@ -17,12 +17,12 @@ namespace MerkantyliuszBarterowy.Model
 
         public int Longitude
         {
-            get { return this._longitude; }
+            get { return _longitude; }
         }
 
         public int Latitude
         {
-            get { return this._latitude; }
+            get { return _latitude; }
         }
 
         public string Name
