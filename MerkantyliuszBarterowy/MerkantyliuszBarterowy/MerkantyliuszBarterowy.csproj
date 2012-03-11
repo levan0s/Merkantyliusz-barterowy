@@ -76,10 +76,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Balance.cs" />
     <Compile Include="Model\Merchant.cs" />
+    <Compile Include="Model\StoreHouse.cs" />
     <Compile Include="Model\Town.cs" />
     <Compile Include="Model\TradeGood.cs" />
+    <Compile Include="Model\TradeGoods\Amount.cs" />
     <Compile Include="Model\TradeGoods\TradeGoodTypes.cs" />
+    <Compile Include="Model\TradeGoods\UnitOfMeasurement.cs" />
     <Compile Include="Model\TradeGoods\Wood.cs" />
     <Compile Include="ViewModel\IBarterViewModel.cs" />
     <Compile Include="ViewModel\IVoyageViewModel.cs" />
