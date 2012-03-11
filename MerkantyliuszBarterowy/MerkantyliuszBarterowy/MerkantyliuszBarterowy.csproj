@@ -78,6 +78,7 @@
     </ApplicationDefinition>
     <Compile Include="Model\Balance.cs" />
     <Compile Include="Model\Merchant.cs" />
+    <Compile Include="Model\PriceList.cs" />
     <Compile Include="Model\StoreHouse.cs" />
     <Compile Include="Model\Town.cs" />
     <Compile Include="Model\TradeGood.cs" />
