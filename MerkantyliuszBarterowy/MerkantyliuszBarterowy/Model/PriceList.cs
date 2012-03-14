@@ -8,47 +8,58 @@ namespace MerkantyliuszBarterowy.Model
     class PriceList
     {
         #region public methods
-
-        public string GetTownName()
-        {
-            return _town.Name;
-        }
+        
         public decimal GetCashEquivalent(string tradeGoodName)
         {
             decimal cashEquivalent = 0;
-            foreach (TradeGood trGood in _tradeGood)
+            foreach (PriceListElement priceListElement in _priceList)
             {
-                if (trGood.Name == tradeGoodName)
+                if (priceListElement.GetName() == tradeGoodName)
                 {
-                    cashEquivalent = trGood.CashEquivalent;
+                    cashEquivalent = priceListElement.CashEquivalent;
                 }
             }
             return cashEquivalent;
         }
+
         public void SetCashEquivalent(string tradeGoodName, decimal cashEquivalent)
         {
-            foreach (TradeGood trGood in _tradeGood)
+            foreach (PriceListElement priceListElement in _priceList)
             {
-                if (trGood.Name == tradeGoodName)
+                if (priceListElement.GetName() == tradeGoodName)
                 {
-                    trGood.CashEquivalent = cashEquivalent;
+                    priceListElement.CashEquivalent = cashEquivalent;
                 }
             }
+        }
+
+        public static PriceList defaultPriceList()
+        { 
+            PriceList defaultPriceList = new PriceList(
+               new PriceListElement(new TradeGood("wood", TradeGoods.TradeGoodType.material), 30),
+               new PriceListElement(new TradeGood("stone", TradeGoods.TradeGoodType.material), 35),
+               new PriceListElement(new TradeGood("steel", TradeGoods.TradeGoodType.material), 40),
+               new PriceListElement(new TradeGood("meat", TradeGoods.TradeGoodType.material), 17),
+               new PriceListElement(new TradeGood("fish", TradeGoods.TradeGoodType.material), 19),
+               new PriceListElement(new TradeGood("cheese", TradeGoods.TradeGoodType.material), 16),
+               new PriceListElement(new TradeGood("apples", TradeGoods.TradeGoodType.material), 10),
+               new PriceListElement(new TradeGood("bread", TradeGoods.TradeGoodType.material), 6),
+               new PriceListElement(new TradeGood("salt", TradeGoods.TradeGoodType.material), 15),
+               new PriceListElement(new TradeGood("wine", TradeGoods.TradeGoodType.material), 20),
+               new PriceListElement(new TradeGood("beer", TradeGoods.TradeGoodType.material), 15),
+               new PriceListElement(new TradeGood("mead", TradeGoods.TradeGoodType.material), 17));
+
+            return defaultPriceList;
         }
 
         #endregion
 
 
-        public PriceList(Town town, params TradeGood[] tradeGood )
+        public PriceList( params PriceListElement[] priceListelements )
         {
-            _town = town;
-            foreach (TradeGood trGood in tradeGood)
-            {
-                _tradeGood.Add(trGood);
-            }
+            _priceList.AddRange(priceListelements);
         }
 
-        private Town _town;
-        private List<TradeGood> _tradeGood = new List<TradeGood>();
+        private List<PriceListElement> _priceList = new List<PriceListElement>();
     }
 }
