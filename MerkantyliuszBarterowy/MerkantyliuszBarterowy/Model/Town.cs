@@ -7,12 +7,14 @@ namespace MerkantyliuszBarterowy.Model
 {
     class Town
     {
+        public PriceList PriceList{ get; set; }
         
-        public Town(int latitude, int longitude, string name)
+        public Town(int latitude, int longitude, string name, PriceList priceList)
         { 
-        _latitude = latitude;
-        _longitude = longitude;
-        _name = name;
+            _latitude = latitude;
+            _longitude = longitude;
+            _name = name;
+            this.PriceList = priceList;
         }
 
         public int Longitude
@@ -40,12 +42,12 @@ namespace MerkantyliuszBarterowy.Model
         public static List<Town> CreateTowns()
         {
             List<Town> towns = new List<Town>(){
-            new Town(-155, -235, "Cintra"),
-            new Town(100, -195, "Mos Eisley"),
-            new Town(130, -60, "Krondor"),
-            new Town(-40, -20, "Bree"),
-            new Town(-255, 65, "Whiterun"),
-            new Town(170, 175, "King's Landing")};
+            new Town(-155, -235, "Cintra", PriceList.defaultPriceList()),
+            new Town(100, -195, "Mos Eisley", PriceList.defaultPriceList()),
+            new Town(130, -60, "Krondor", PriceList.defaultPriceList()),
+            new Town(-40, -20, "Bree", PriceList.defaultPriceList()),
+            new Town(-255, 65, "Whiterun", PriceList.defaultPriceList()),
+            new Town(170, 175, "King's Landing", PriceList.defaultPriceList())};
             
             return towns;
         }
