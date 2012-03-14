@@ -19,7 +19,7 @@ namespace MerkantyliuszBarterowy.Model
         {
             foreach (Balance addListElement in addList)
             {
-                addElement(addListElement);
+                AddElement(addListElement);
             }
             
         }
@@ -28,29 +28,23 @@ namespace MerkantyliuszBarterowy.Model
         {
             foreach (Balance substractListElement in substractList)
             { 
-                removeElement(substractListElement);
+                RemoveElement(substractListElement);
             }
         }
 
 
-        private void addElement(Balance addListElement)
+        private void AddElement(Balance addListElement)
         {
-            bool isOnList = false;
             foreach (Balance bal in _balanceList)
             {
                 if (bal.BalanceName == addListElement.BalanceName)
                 { 
                     bal.Quantity += addListElement.Quantity;
-                    isOnList = true;
                 }
-            }
-            if (!isOnList)
-            {
-                _balanceList.Add(addListElement);
             }
         }
 
-        private void removeElement(Balance substractListElement)
+        private void RemoveElement(Balance substractListElement)
         {   
             foreach (Balance bal in _balanceList)
             {
@@ -60,6 +54,7 @@ namespace MerkantyliuszBarterowy.Model
                 }
             }
         }
+
         private List<Balance> _balanceList = new List<Balance>();
     }
 }
