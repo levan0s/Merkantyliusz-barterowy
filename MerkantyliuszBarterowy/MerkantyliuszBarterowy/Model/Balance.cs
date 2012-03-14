@@ -6,10 +6,10 @@ using System.Text;
 namespace MerkantyliuszBarterowy.Model
 {
     class Balance
-    {
-        
+    { 
         public int Quantity
         { get; set; }
+
         public string BalanceName
         { get { return _balanceName; } }
         
@@ -20,7 +20,7 @@ namespace MerkantyliuszBarterowy.Model
             _tradeGood = tradeGood;
         }
 
-        TradeGood _tradeGood;
+        private TradeGood _tradeGood;
         private string _balanceName;
     }
 }
