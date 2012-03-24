@@ -18,6 +18,23 @@ namespace MerkantyliuszBarterowy.Model
         {
             get { return _name; }
         }
+        public static List<TradeGood> GetDefaultTradeGoodList()
+        {
+            List<TradeGood> defalutTradeGoodList = new List<TradeGood>();
+            defalutTradeGoodList.Add(new TradeGood("wood", TradeGoods.TradeGoodType.material));
+            defalutTradeGoodList.Add(new TradeGood("stone", TradeGoods.TradeGoodType.material));
+            defalutTradeGoodList.Add(new TradeGood("steel", TradeGoods.TradeGoodType.material));
+            defalutTradeGoodList.Add(new TradeGood("meat", TradeGoods.TradeGoodType.material));
+            defalutTradeGoodList.Add(new TradeGood("fish", TradeGoods.TradeGoodType.material));
+            defalutTradeGoodList.Add(new TradeGood("cheese", TradeGoods.TradeGoodType.material));
+            defalutTradeGoodList.Add(new TradeGood("apples", TradeGoods.TradeGoodType.material));
+            defalutTradeGoodList.Add(new TradeGood("bread", TradeGoods.TradeGoodType.material));
+            defalutTradeGoodList.Add(new TradeGood("salt", TradeGoods.TradeGoodType.material));
+            defalutTradeGoodList.Add(new TradeGood("wine", TradeGoods.TradeGoodType.material));
+            defalutTradeGoodList.Add(new TradeGood("beer", TradeGoods.TradeGoodType.material));
+            defalutTradeGoodList.Add(new TradeGood("mead", TradeGoods.TradeGoodType.material));
+            return defalutTradeGoodList;
+         }
         
         private string _name;
         private TradeGoodType _tradeGoodType;
