@@ -42,12 +42,12 @@ namespace MerkantyliuszBarterowy.Model
         public static List<Town> CreateTowns()
         {
             List<Town> towns = new List<Town>(){
-            new Town(-155, -235, "Cintra", PriceList.defaultPriceList()),
-            new Town(100, -195, "Mos Eisley", PriceList.defaultPriceList()),
-            new Town(130, -60, "Krondor", PriceList.defaultPriceList()),
-            new Town(-40, -20, "Bree", PriceList.defaultPriceList()),
-            new Town(-255, 65, "Whiterun", PriceList.defaultPriceList()),
-            new Town(170, 175, "King's Landing", PriceList.defaultPriceList())};
+            new Town(-155, -235, "Cintra", PriceList.GetDefaultPriceList()),
+            new Town(100, -195, "Mos Eisley", PriceList.GetDefaultPriceList()),
+            new Town(130, -60, "Krondor", PriceList.GetDefaultPriceList()),
+            new Town(-40, -20, "Bree", PriceList.GetDefaultPriceList()),
+            new Town(-255, 65, "Whiterun", PriceList.GetDefaultPriceList()),
+            new Town(170, 175, "King's Landing", PriceList.GetDefaultPriceList())};
             
             return towns;
         }
